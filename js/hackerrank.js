@@ -43,3 +43,44 @@ function printnums(n) {
 
 console.log(printnums(3));
 console.log(printnums(15));
+
+
+//////////////////
+
+/*
+ * Complete the vowelsAndConsonants function.
+ * Print your output using 'console.log()'.
+ */
+function vowelsAndConsonants(s) {
+    let array1 = [];
+    let array2 = [];
+    //loop through the string... make it an array?
+    s.split('').forEach((letter)=>{
+
+        switch (letter) {
+            case 'a' :
+                array1.push(letter);
+                break;
+            case 'e':
+                array1.push(letter);
+                break;
+            case 'i':
+                array1.push(letter);
+                break;
+            case 'o':
+                array1.push(letter);
+                break;
+            case 'u':
+                array1.push(letter);
+                break;
+            default:
+                array2.push(letter);
+        }
+        // if (letter == 'a') {
+        // array1.push(letter);
+        // }
+
+    })
+    console.log(array1.join('\n'));
+    console.log(array2.join('\n'));
+}
