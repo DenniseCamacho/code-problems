@@ -56,3 +56,16 @@ console.log(toCamelCase('The-Stealth-Warrior'), 'The-Stealth-Warrior');
 console.log(toCamelCase('the_stealth_warrior'), 'the_stealth_warrior');
 console.log(toCamelCase(''), 'is a blank space');
 console.log(toCamelCase('A-B-C'), 'A-B-C');
+
+
+// Complete the solution so that it reverses the string passed into it.
+// 'world'  =>  'dlrow'
+// 'word'   =>  'drow'
+function solution(str){
+//    to turn to an array
+let str1 = str.split('');
+let str2 = str1.reverse();
+return str2.join("");
+
+}
+console.log(solution("word"));
