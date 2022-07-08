@@ -69,3 +69,7 @@ return str2.join("");
 
 }
 console.log(solution("word"));
+
+function digitize(n) {
+    return n.split('');
+}
