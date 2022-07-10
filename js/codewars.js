@@ -1,7 +1,8 @@
 "use strict";
-function toCamelCase(str){
 
-    switch (str){
+function toCamelCase(str) {
+
+    switch (str) {
         case '':
             return '';
             break;
@@ -10,16 +11,16 @@ function toCamelCase(str){
     let underScoredWord = '';
     let newWord = '';
     //every word after the first word & underscore should be capitalized.
-    if(str.indexOf('_') > -1) {
+    if (str.indexOf('_') > -1) {
         //if it contains _ do this:
         underScoredWord = str.split('_');
         //splitting in from the underscore and turning it into an array of words.
 
         //for each word in the array,
-        underScoredWord.forEach((word, index, array)=>{
+        underScoredWord.forEach((word, index, array) => {
             // console.log('this is value: ' + value);
             //we only want the words after the first word to be capitalized
-            if(index > 0) {
+            if (index > 0) {
                 //so we pick anything after index 0
 
                 // console.log(word);
@@ -52,24 +53,51 @@ function toCamelCase(str){
 
 }
 
-console.log(toCamelCase('The-Stealth-Warrior'), 'The-Stealth-Warrior');
-console.log(toCamelCase('the_stealth_warrior'), 'the_stealth_warrior');
-console.log(toCamelCase(''), 'is a blank space');
-console.log(toCamelCase('A-B-C'), 'A-B-C');
+//
+// console.log(toCamelCase('The-Stealth-Warrior'), 'The-Stealth-Warrior');
+// console.log(toCamelCase('the_stealth_warrior'), 'the_stealth_warrior');
+// console.log(toCamelCase(''), 'is a blank space');
+// console.log(toCamelCase('A-B-C'), 'A-B-C');
 
 
 // Complete the solution so that it reverses the string passed into it.
 // 'world'  =>  'dlrow'
 // 'word'   =>  'drow'
-function solution(str){
+function solution(str) {
 //    to turn to an array
-let str1 = str.split('');
-let str2 = str1.reverse();
-return str2.join("");
+    let str1 = str.split('');
+    let str2 = str1.reverse();
+    return str2.join("");
 
 }
-console.log(solution("word"));
 
-function digitize(n) {
-    return n.split('');
+// console.log(solution("word"));
+
+function digitize(numbers) {
+    // numbers.forEach((item, index, array)=>{
+    //     console.log(item);
+    // });
+    if (!isNaN()) {
+        return "";
+    }
+    if (typeof numbers === "number") {
+        let numberArray = [];
+        numbers.toString()
+            .split('')
+            .forEach((value, index, array) => {
+                // numberArray.push(value.split('\''));
+                numberArray.push(parseFloat(value));
+            });
+
+        return numberArray.reverse();
+
+    } else return numbers.reverse();
+    //if this is true that the
+    // if (numbers === typeof "numbers" && numbers !== typeof "object") {
+    //     numbers = numbers.toString();
+    //     return numbers.split('').reverse();
+    // } else return typeof numbers;
 }
+
+console.log(digitize(35231));
+console.log(digitize([3, 5, 2, 3, 1]));
