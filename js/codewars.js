@@ -99,11 +99,19 @@ function digitize(numbers) {
 console.log(digitize(35231));
 console.log(digitize([3, 5, 2, 3, 1]));
 
-function lovefunc(flower1, flower2){
+function lovefunc(flower1, flower2) {
     // moment of truth
-    return !(flower1 === flower2 && flower2 === flower1);
+    if (flower1 === flower2 || flower2 === flower1) {
+        return false;
+    } else if (flower1 % 2 === 0 && flower2 % 2 === 0) {
+        return false;
+    } else return true;
 }
-console.log(lovefunc(1,4), true);
-console.log(lovefunc(2,2), false);
-console.log(lovefunc(0,1), true);
-console.log(lovefunc(0,0), false);
+
+// didn't work for flowers with 945 and 469 petals: expected true to equal false
+
+console.log(lovefunc(1, 4), true);
+console.log(lovefunc(2, 2), false);
+console.log(lovefunc(0, 1), true);
+console.log(lovefunc(0, 0), false);
+console.log(lovefunc(945, 469), false);
