@@ -77,9 +77,6 @@ function digitize(numbers) {
     // numbers.forEach((item, index, array)=>{
     //     console.log(item);
     // });
-    if (!isNaN()) {
-        return "";
-    }
     if (typeof numbers === "number") {
         let numberArray = [];
         numbers.toString()
@@ -101,3 +98,12 @@ function digitize(numbers) {
 
 console.log(digitize(35231));
 console.log(digitize([3, 5, 2, 3, 1]));
+
+function lovefunc(flower1, flower2){
+    // moment of truth
+    return !(flower1 === flower2 && flower2 === flower1);
+}
+console.log(lovefunc(1,4), true);
+console.log(lovefunc(2,2), false);
+console.log(lovefunc(0,1), true);
+console.log(lovefunc(0,0), false);
