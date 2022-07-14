@@ -41,8 +41,8 @@ function printnums(n) {
 
 }
 
-console.log(printnums(3));
-console.log(printnums(15));
+// console.log(printnums(3));
+// console.log(printnums(15));
 
 
 //////////////////
@@ -81,17 +81,19 @@ function vowelsAndConsonants(s) {
         // }
 
     })
-    console.log(array1.join('\n'));
-    console.log(array2.join('\n'));
+    // console.log(array1.join('\n'));
+    // console.log(array2.join('\n'));
 }
 
 
-function digital_root(param){
-    param = 456;
-    return param;
-}
+// function digital_root(param){
+//     param = 456;
+//     return param;
+// }
 
-console.log(digital_root(456));
+// console.log(digital_root(456));
 
 // digital_root(16);
 // digital_root(456);
+
+// console.log('trsting');
