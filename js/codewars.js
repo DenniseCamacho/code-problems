@@ -101,9 +101,11 @@ console.log(digitize([3, 5, 2, 3, 1]));
 
 function lovefunc(flower1, flower2) {
     // moment of truth
-    if (flower1 === flower2 || flower2 === flower1) {
+    if (flower1 === flower2 && flower2 === flower1) {
         return false;
     } else if (flower1 % 2 === 0 && flower2 % 2 === 0) {
+        return false;
+    } else if (parseFloat(flower1) % 2 !== 0 && flower2 % 2 === 0) {
         return false;
     } else return true;
 }
@@ -115,3 +117,31 @@ console.log(lovefunc(2, 2), false);
 console.log(lovefunc(0, 1), true);
 console.log(lovefunc(0, 0), false);
 console.log(lovefunc(945, 469), false);
+
+function fb(n) {
+    let newnum = [];
+    for (let i = 1; i <= n; i++) {
+        newnum.push(i);
+    }
+
+    newnum.forEach((value, index, array) => {
+        if (value % 3 === 0 && value % 5 === 0) {
+            newnum.splice(index, 1,'FizzBuzz');
+        }
+         else if (value % 5 === 0 && value % 3 !== 0) {
+            newnum.splice(index, 1, "Buzz");
+        } else if (value % 3 == 0 && value % 5 !== 0) {
+             newnum.splice(index, 1, "Fizz")
+        } else return newnum;
+    });
+
+
+    return newnum.join('\n');
+}
+
+console.log(fb(15));
+
+// given an array of integers, return a new array with each value doubled.
+// function maps(ints){
+//     ints.map
+// }
